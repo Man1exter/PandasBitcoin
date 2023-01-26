@@ -1,0 +1,5 @@
+Downloading the current bitcoin rate at the right time.
+
+Saving to a database (self-created in a folder)
+
+Reading of saved data and analysis on the example of tables/graphs and other similar.
