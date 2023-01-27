@@ -21,7 +21,7 @@ except Exception as e:
 
 
 class Prices(Base):
-    __tablename__ = 'Prices of Bitcoins'
+    __tablename__ = 'PriceBitcoins'
     
     Coin = Column(String, primary_key = True)
     Date = Column(DateTime, primary_key = True)
