@@ -11,7 +11,7 @@ if not sys.warnoptions:
     warnings.simplefilter("default")
 
 Base = declarative_base()
-password = 'admin123'
+password = 'Coins123'
 
 try:
     engine = create_engine(f"sqlite:///mydatabitcoins.db?password={password}", echo=True)
