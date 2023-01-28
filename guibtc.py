@@ -57,7 +57,6 @@ class MyWindow(QWidget):
         self.button5.clicked.connect(self.on_button_clicked)
         
     def news_right_wind(self):
-        
         pass
         
 
