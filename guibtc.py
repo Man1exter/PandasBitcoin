@@ -103,6 +103,12 @@ class MyWindow(QWidget):
           
     def clear_data(self):
         self.right_widget.clear()
+        self.conn = sqlite3.connect('mydatabitcoins.db')
+        self.cursor = self.conn.cursor()
+        self.cursor.execute('DELETE FROM PriceBitcoins')
+        self.conn.commit()
+        self.conn.close()
+        self.counter = 0
         
     def on_button_clicked(self):
         app.exit()
