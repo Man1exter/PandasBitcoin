@@ -47,8 +47,8 @@ class MyWindow(QWidget):
         self.results = self.cursor.fetchall()
         
         for result in self.results:
-           self.right_widget.append(result[1])
-        
+           self.right_widget.append("{} {} {} {}".format(result[0], result[1], result[2], result[3]))
+           
         self.conn.close()
 
         self.main_layout.addLayout(self.left_layout)
@@ -57,7 +57,7 @@ class MyWindow(QWidget):
         self.setLayout(self.main_layout)
         self.setWindowTitle("BITCOIN APPLICATION")
         self.resize(700,400)
-        self.setStyleSheet("background-color: black; color: white;")
+        self.setStyleSheet("background-color: black; color: white; font-size: 20px;")
         
         self.button1.clicked.connect(self.news_right_wind)
         self.button2.clicked.connect(self.on_button_pie)
@@ -96,7 +96,7 @@ class MyWindow(QWidget):
           self.results = self.cursor.fetchall()
         
           for result in self.results:
-           self.right_widget.append(result[1])
+           self.right_widget.append("{} {} {} {}".format(result[0], result[1], result[2], result[3]))
         
           self.conn.close()
           self.main_layout.addWidget(self.right_widget)
