@@ -3,6 +3,11 @@ import pandas as pd
 import sqlite3
 import matplotlib.pyplot as plt
 import matplotlib.widgets as widgets
+import requests
+import time
+import main
+from sqlalchemy.orm import sessionmaker
+
 
 class MyWindow(QWidget):
     def __init__(self):
@@ -56,10 +61,30 @@ class MyWindow(QWidget):
         self.button4.clicked.connect(self.on_button_line)
         self.button5.clicked.connect(self.on_button_clicked)
         
-    def news_right_wind(self):
-        pass
+        self.Session = sessionmaker(bind=main.engine)
+        self.session = self.Session()
         
-
+    def add_price(self, Coin, Currency, Price):
+          self.pad = main.Prices(Coin, Currency, Price)
+          self.session.add(self.pad)
+          self.session.commit()
+          
+    def news_right_wind(self):
+          self.counter = 0
+          while True:
+            if self.counter < 10:
+              res = requests.get("https://api.coinbase.com/v2/prices/spot?currency=USD").json()
+              Coin = res['data']['base']
+              Currency = res['data']['currency']
+              Price = res['data']['amount']
+              self.add_price(Coin, Currency, Price)
+              time.sleep(2)
+              self.counter += 1
+            else:
+              break
+            
+            self.session.close()
+        
     def on_button_clicked(self):
         app.exit()
     
