@@ -31,6 +31,16 @@ class MyWindow(QWidget):
         self.df = pd.read_sql('select * from PriceBitcoins', self.conn)
     
         self.right_widget = QTextEdit()
+        
+        self.conn = sqlite3.connect('mydatabitcoins.db')
+        self.cursor = self.conn.cursor()
+        self.cursor.execute('SELECT * FROM PriceBitcoins')
+        self.results = self.cursor.fetchall()
+        
+        for result in self.results:
+           self.right_widget.append(result[1])
+        
+        self.conn.close()
 
         self.main_layout.addLayout(self.left_layout)
         self.main_layout.addWidget(self.right_widget)
@@ -48,15 +58,7 @@ class MyWindow(QWidget):
         
     def news_right_wind(self):
         
-        self.conn = sqlite3.connect('mydatabitcoins.db')
-        self.cursor = self.conn.cursor()
-        self.cursor.execute('SELECT * FROM PriceBitcoins')
-        self.results = self.cursor.fetchall()
-        
-        for result in self.results:
-           self.right_widget.append(result[1])
-        
-        self.conn.close()
+        pass
         
 
     def on_button_clicked(self):
