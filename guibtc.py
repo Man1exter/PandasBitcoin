@@ -6,6 +6,7 @@ import matplotlib.widgets as widgets
 import requests
 import time
 import main
+from PyQt5.QtWidgets import QMessageBox
 from sqlalchemy.orm import sessionmaker
 
 
@@ -84,6 +85,17 @@ class MyWindow(QWidget):
               break
             
             self.session.close()
+            
+          self.conn = sqlite3.connect('mydatabitcoins.db')
+          self.cursor = self.conn.cursor()
+          self.cursor.execute('SELECT * FROM PriceBitcoins')
+          self.results = self.cursor.fetchall()
+        
+          for result in self.results:
+           self.right_widget.append(result[1])
+        
+          self.conn.close()
+          self.main_layout.addWidget(self.right_widget)
         
     def on_button_clicked(self):
         app.exit()
