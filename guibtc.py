@@ -21,17 +21,20 @@ class MyWindow(QWidget):
         self.button3 = QPushButton("Bar Graph")
         self.button4 = QPushButton("Line Graph")
         self.button5 = QPushButton("EXIT")
+        self.button6 = QPushButton("CLEAR ALL")
         self.left_layout.addWidget(self.button1)
         self.left_layout.addWidget(self.button2)
         self.left_layout.addWidget(self.button3)
         self.left_layout.addWidget(self.button4)
         self.left_layout.addWidget(self.button5)
+        self.left_layout.addWidget(self.button6)
 
         self.button1.setStyleSheet("background-color: red; color: white; font-weight: bold;")
         self.button2.setStyleSheet("background-color: red; color: white; font-weight: bold;")
         self.button3.setStyleSheet("background-color: red; color: white; font-weight: bold;")
         self.button4.setStyleSheet("background-color: red; color: white; font-weight: bold;")
         self.button5.setStyleSheet("background-color: red; color: white; font-weight: bold;")
+        self.button6.setStyleSheet("background-color: red; color: white; font-weight: bold;")
 
         self.conn = sqlite3.connect('mydatabitcoins.db')
         self.df = pd.read_sql('select * from PriceBitcoins', self.conn)
@@ -61,6 +64,7 @@ class MyWindow(QWidget):
         self.button3.clicked.connect(self.on_button_bar)
         self.button4.clicked.connect(self.on_button_line)
         self.button5.clicked.connect(self.on_button_clicked)
+        self.button6.clicked.connect(self.clear_data)
         
         self.Session = sessionmaker(bind=main.engine)
         self.session = self.Session()
@@ -96,6 +100,9 @@ class MyWindow(QWidget):
         
           self.conn.close()
           self.main_layout.addWidget(self.right_widget)
+          
+    def clear_data(self):
+        self.right_widget.clear()
         
     def on_button_clicked(self):
         app.exit()
