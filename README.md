@@ -32,8 +32,10 @@ https://github.com/Man1exter/PandasBitcoin
 - 🐍[@Man1exter](https://github.com/Man1exter?tab=repositories)🐍
 
 
-![ActionI](1step.png)
+![ActionI] pandasssss\1step.PNG
+
 ![ActionII](2step.png)
+
 ![ActionIII](ink.png)
 
 
