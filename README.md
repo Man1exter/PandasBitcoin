@@ -32,11 +32,11 @@ https://github.com/Man1exter/PandasBitcoin
 - 🐍[@Man1exter](https://github.com/Man1exter?tab=repositories)🐍
 
 
-![ActionI](https://github.com/Man1exter/PandasBitcoin/blob/9944e870cd58d4fe27cd8178858701b7f3b54a17/pandasssss/2step.PNG)
+![ActionI](https://github.com/Man1exter/PandasBitcoin/blob/9944e870cd58d4fe27cd8178858701b7f3b54a17/pandasssss/ink.PNG)
 
 ![ActionII](https://github.com/Man1exter/PandasBitcoin/blob/9944e870cd58d4fe27cd8178858701b7f3b54a17/pandasssss/1step.PNG)
 
-![ActionIII](https://github.com/Man1exter/PandasBitcoin/blob/9944e870cd58d4fe27cd8178858701b7f3b54a17/pandasssss/ink.PNG)
+![ActionIII](https://github.com/Man1exter/PandasBitcoin/blob/9944e870cd58d4fe27cd8178858701b7f3b54a17/pandasssss/2step.PNG)
 
 
 ## Tech Stack
