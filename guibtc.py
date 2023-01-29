@@ -132,7 +132,7 @@ class MyWindow(QWidget):
     def on_button_bar(self):
         conn = sqlite3.connect('mydatabitcoins.db')
         self.df = pd.read_sql('select * from PriceBitcoins', conn)
-        self.df = self.df['Price'].value_counts().nlargest(20)
+        self.df = self.df['Price'].value_counts().nlargest(30)
         self.df.plot.pie(y='Price', autopct='%1.1f%%')
         plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
         plt.show()
