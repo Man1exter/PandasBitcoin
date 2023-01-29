@@ -32,11 +32,11 @@ https://github.com/Man1exter/PandasBitcoin
 - 🐍[@Man1exter](https://github.com/Man1exter?tab=repositories)🐍
 
 
-![ActionI](pandasssss\1step.PNG)
+![ActionI](C:\Users\mperz\Desktop\PandasBitcoin\pandasssss\1step.PNG)
 
-![ActionII](2step.png)
+![ActionII](C:\Users\mperz\Desktop\PandasBitcoin\pandasssss\2step.PNG)
 
-![ActionIII](ink.png)
+![ActionIII](C:\Users\mperz\Desktop\PandasBitcoin\pandasssss\ink.PNG)
 
 
 ## Tech Stack
