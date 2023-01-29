@@ -32,7 +32,7 @@ https://github.com/Man1exter/PandasBitcoin
 - 🐍[@Man1exter](https://github.com/Man1exter?tab=repositories)🐍
 
 
-![ActionI] (pandasssss\1step.PNG)
+![ActionI](pandasssss\1step.PNG)
 
 ![ActionII](2step.png)
 
